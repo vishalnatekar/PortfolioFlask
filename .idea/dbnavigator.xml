@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -13,45 +13,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="f48f97c5-d183-4751-9e3a-532690f25ec3">
-      <console name="LocalPostgres" type="STANDARD" schema="postgres" session="Main"><![CDATA[select
-    cd.ask,
-    cd.bid,
-    cd.change,
-    cd."contractSize",
-    cd."contractSymbol",
-    cd.currency,
-    cd."impliedVolatility",
-    cd."inTheMoney",
-    cd."lastPrice",
-    cd."lastTradeDate",
-    cd."openInterest",
-    cd."percentChange",
-    cd.strike,
-    cd.volume
-from
-    calls_data cd;
+      <console name="LocalPostgres" type="STANDARD" schema="public" session="Main"><![CDATA[select * from "transaction";
 
-select * from calls_data;
-
-
-select
-    pd.ask,
-    pd.bid,
-    pd.change,
-    pd."contractSize",
-    pd."contractSymbol",
-    pd.currency,
-    pd."impliedVolatility",
-    pd."inTheMoney",
-    pd."lastPrice",
-    pd."lastTradeDate",
-    pd."openInterest",
-    pd."percentChange",
-    pd.strike,
-    pd.volume
-from
-    puts_data pd;]]></console>
-      <console name="LocalPostgres 1" type="STANDARD" schema="postgres" session="Main" />
+select * from historical_data;]]></console>
       <console name="LocalPostgres 1" type="STANDARD" schema="postgres" session="Main" />
       <console name="LocalPostgres 2" type="STANDARD" schema="postgres" session="Main"><![CDATA[select * from calls_data;]]></console>
     </connection>
